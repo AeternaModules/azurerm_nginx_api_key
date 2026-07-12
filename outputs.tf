@@ -1,3 +1,7 @@
+output "nginx_api_keys_id" {
+  description = "Map of id values across all nginx_api_keys, keyed the same as var.nginx_api_keys"
+  value       = { for k, v in azurerm_nginx_api_key.nginx_api_keys : k => v.id }
+}
 output "nginx_api_keys_end_date_time" {
   description = "Map of end_date_time values across all nginx_api_keys, keyed the same as var.nginx_api_keys"
   value       = { for k, v in azurerm_nginx_api_key.nginx_api_keys : k => v.end_date_time }
