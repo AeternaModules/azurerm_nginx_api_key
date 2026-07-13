@@ -6,8 +6,8 @@ Required:
     - name
     - nginx_deployment_id
     - secret_text
-    - secret_text_key_vault_id (alternative to secret_text - read from Key Vault instead)
-    - secret_text_key_vault_secret_name (alternative to secret_text - read from Key Vault instead)
+    - secret_text_key_vault_id (optional, alternative to secret_text)
+    - secret_text_key_vault_secret_name (optional, alternative to secret_text)
 EOT
 
   type = map(object({
